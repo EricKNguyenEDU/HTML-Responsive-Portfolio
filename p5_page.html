@@ -33,37 +33,37 @@ body {
   float: right;
 }
 
-/* Portfolio row styles (single row) */
+/* Portfolio grid styles */
 .portfolio-grid {
-  display: flex;
-  flex-wrap: nowrap;       /* keeps all images on one row */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
-  overflow-x: auto;        /* horizontal scroll if needed */
-  justify-content: center;
+  
+  max-width: 1000px;       /* keeps the layout tight and centered */
+  margin: 0 auto;          /* centers the grid on the page */
+  
+  justify-items: center;   /* centers each item */
+  justify-content: center; /* keeps everything aligned */
 }
 
-/* Remove link underline and enable hover animation */
+}
+
 .portfolio-grid a {
-  flex: 0 0 auto;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
 
-/* Hover pop-up effect */
 .portfolio-grid a:hover {
-  transform: scale(1.08);   /* pop-up zoom effect */
+  transform: scale(1.05);
 }
 
 .portfolio-grid img {
-  width: 250px;
+  width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
 }
 </style>
 </head>
@@ -76,29 +76,20 @@ body {
 </div>
 
 <div style="padding-left:16px">
-  <h2>Portfolio</h2>
-  <p>Welcome to my portfolio</p>
+  <h2>P5.js work</h2>
+  <p>Here is all of my p5.js work</p>
 </div>
 
 <!-- Image grid -->
 <div class="portfolio-grid">
-  <a href="glitch_art_page.html">
-    <img src="image/project_1.png" alt="Project 1">
+  <a href="p5_self_portrait_page.html">
+    <img src="image/selfportrait.png" alt="Project 1">
   </a>
-  <a href="meme_mashup_page.html">
-    <img src="image/project_2.png" alt="Project 2">
+  <a href="p5_drawing_tool_page.html">
+    <img src="image/drawing_tool_working.png" alt="Project 2">
   </a>
-  <a href="3D_object_page.html">
-    <img src="image/project_3.png" alt="Project 3">
-  </a>
-  <a href="art_net_narrative_page.html">
-    <img src="image/project_4.png" alt="Project 4">
-  </a>
-    <a href="p5_page.html">
-    <img src="image/game_screenshot_2.png" alt="Project 5">
-  </a>
-    <a href="final_project_page.html">
-    <img src="image/glitch_video3.jpg" alt="Project 6">
+  <a href="p5_game_page.html">
+    <img src="image/game_screenshot.png" alt="Project 3">
   </a>
 </div>
 
